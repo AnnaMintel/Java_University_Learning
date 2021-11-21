@@ -1,6 +1,6 @@
-package com.company;
+package Printing;
 
-abstract public class Printing {
+abstract public class Printing{
     String Name;
     int PageCount;
     Printing(String Name, int PageCount) throws Exception{
@@ -17,8 +17,8 @@ abstract public class Printing {
         return Name;
     }
     private void setName(String name) throws Exception{
-        if (name == null || name.length() < 1)
-            throw new Exception("Name can't be empty or less then one symbol");
+        if (name == null || name.length() < 1){
+            throw new Exception("Name can't be empty or less then one symbol");}
         this.Name = name.substring(0, 1).toUpperCase() +
                 name.substring(1);
     }

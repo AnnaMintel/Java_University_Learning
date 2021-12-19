@@ -5,23 +5,38 @@ package com.company;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
+import  java.lang.Object;
 
 public  class Main {
+
 
     public static void main(String[] args) {
         // write your code here
 
-        Money money = new Money();
-        money.setValues(); // устанавливаем значение
-        money.showInfo(); // показываем инф о купюрах и номинале
-        money.countingMoney(); // рассчитываем полную сумму
-        money.enoughMoney(); // достаточно ли денег на покупку товара
-        money.countOfGoods(); // сколько товара можем купить
+        Dollars dollars = new Dollars();
+        dollars.setValues(); // устанавливаем значение
+        dollars.showInfo(); // показываем инф о купюрах и номинале
+        dollars.countingMoney(); // рассчитываем полную сумму
+        dollars.enoughMoney(); // достаточно ли денег на покупку товара
+        dollars.countOfGoods(); // сколько товара можем купить
 
-        Mistakes mistakes1 = new Mistakes();
-        mistakes1.isError();
-        }
+        Test test = new Test();
+        test.equals();
     }
+
+    // делаем ссылку на объект подкласса
+    private void Tests() {
+        // ссылка на класс Money может ссылаться на класс Dollars
+        Money objA = new Money(); // экземпляр (объект) класса Money
+        Dollars objB = new Dollars(); // экземпляр (объект) класса Dollars
+        Money rA; // ссылка на класс Money
+
+        // ссылке на класс Money присваивается ссылка на экземпляр класса Dollars
+        rA = objB;
+
+    }
+}
 
 
 

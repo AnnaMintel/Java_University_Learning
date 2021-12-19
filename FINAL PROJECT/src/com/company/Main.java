@@ -1,10 +1,10 @@
 /*
  * Минтель Анна, Группа Пв2-20ПО
  */
-
 package com.company;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public  class Main {
 
@@ -18,8 +18,8 @@ public  class Main {
         money.enoughMoney(); // достаточно ли денег на покупку товара
         money.countOfGoods(); // сколько товара можем купить
 
-
-
+        Mistakes mistakes1 = new Mistakes();
+        mistakes1.isError();
         }
     }
 

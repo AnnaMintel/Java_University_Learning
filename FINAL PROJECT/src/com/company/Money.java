@@ -27,16 +27,22 @@ public class Money {
         }
 
         // метод, позволяющий получить-установить значение полей
-        public void setValues(){
-            Scanner sc = new Scanner(System.in); // создаем экземпляр класса Scanner
-            System.out.println("Введите номинал купюр:");
-            first = sc.nextInt();
+        public void setValues() {
+            try {
+                Scanner sc = new Scanner(System.in); // создаем экземпляр класса Scanner
+                System.out.println("Введите номинал купюр:");
+                first = sc.nextInt();
 
-            System.out.println("Введите количество купюр:");
-            second = sc.nextInt();
+                System.out.println("Введите количество купюр:");
+                second = sc.nextInt();
 
-            System.out.println("Введите стоимость единицы товара:");
-            n = sc.nextInt();
+                System.out.println("Введите стоимость единицы товара:");
+                n = sc.nextInt();
+
+            } catch (Exception exception) {
+                Mistakes mistakes1 = new Mistakes();
+                mistakes1.isError();
+            }
         }
 
         // метод, позволяющий рассчитать сумму денег
